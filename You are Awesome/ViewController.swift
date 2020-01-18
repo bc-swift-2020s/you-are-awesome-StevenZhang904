@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var messageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print("emojil😿")
+        messageLabel.text="You are fabulous."
     }
 
-
+    @IBAction func messageButtonPressed(_ sender: UIButton) {
+        print("emoji😁")
+        messageLabel.text="You are Awesome."
+    }
+    
 }
 
