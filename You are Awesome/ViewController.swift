@@ -18,10 +18,14 @@ class ViewController: UIViewController {
         messageLabel.text="You are fabulous."
     }
 
-    @IBAction func messageButtonPressed(_ sender: UIButton) {
+    @IBAction func messageButtonPressedFirst(_ sender: UIButton) {
         print("emoji😁")
         messageLabel.text="You are Awesome."
     }
     
+    
+    @IBAction func messageButtonPressedSecond(_ sender: UIButton) {
+        messageLabel.text="You are great."
+    }
 }
 
