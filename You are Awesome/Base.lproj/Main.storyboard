@@ -16,26 +16,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZj-5P-0L7">
-                                <rect key="frame" x="108" y="207" width="105" height="30"/>
+                                <rect key="frame" x="106" y="132" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Show message"/>
                                 <connections>
                                     <action selector="messageButtonPressedFirst:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3j4-Ag-zgO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are Awesome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I64-7y-GOs">
-                                <rect key="frame" x="41" y="29" width="238" height="95"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoC-kx-Y0J">
+                                <rect key="frame" x="76" y="170" width="165" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show another message"/>
+                                <connections>
+                                    <action selector="messageButtonPressedSecond:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B2x-7r-g4q"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="mLH-hp-eNR">
+                                <rect key="frame" x="15" y="208" width="287" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2c-xN-M8w">
+                                <rect key="frame" x="16" y="94" width="287" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="The next message"/>
+                                <connections>
+                                    <action selector="messageButtonPressedForWords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TIv-T5-LEC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are Awesome" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="I64-7y-GOs">
+                                <rect key="frame" x="41" y="0.0" width="238" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                 <color key="textColor" red="0.92133218050003052" green="0.26978034707106002" blue="0.18188276473704959" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoC-kx-Y0J">
-                                <rect key="frame" x="76" y="245" width="165" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxl-dj-Dq7">
+                                <rect key="frame" x="16" y="56" width="288" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Show another message"/>
+                                <state key="normal" title="RandomMessagesAndPictures"/>
                                 <connections>
-                                    <action selector="messageButtonPressedSecond:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B2x-7r-g4q"/>
+                                    <action selector="RandomMessgesAndPictures:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hYo-fA-aXD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -43,6 +63,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="mLH-hp-eNR" id="Y4K-yr-GbE"/>
                         <outlet property="messageLabel" destination="I64-7y-GOs" id="U1w-1e-64O"/>
                     </connections>
                 </viewController>
@@ -51,4 +72,7 @@
             <point key="canvasLocation" x="136.875" y="128.87323943661971"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image0" width="475" height="633"/>
+    </resources>
 </document>
