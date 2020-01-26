@@ -14,42 +14,40 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    var messages = ["You are awesome","You are great","You are fantanstic","Fabulous?That's you"]
-    var number=0
+   
+    var imageNumber = -1
+    var messageNumber = -1
+    let totalNumberOfImages=9
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        messageLabel.text="You are fabulous."
+     //  messageLabel.text="You are fabulous."
     }
     
-    @IBAction func /* changing the words shown*/
     
-        messageButtonPressedForWords(_ sender: UIButton) {
-        messageLabel.text = messages[number]
-        number=number+1
-        if(number == messages.count){
-            number=0
-        }
+    @IBAction func messageButtonPressed(_ sender: UIButton) {
+         let messages = ["You are awesome",
+                         "You are great",
+                         "You are fantanstic",
+                         "Fabulous?That's you",
+                         "You've got the design skills"]
+        var newMessageNumber: Int
+        repeat{
+            newMessageNumber = Int.random(in: 0...messages.count-1)
+        }while messageNumber==newMessageNumber
+        messageNumber=newMessageNumber
+        messageLabel.text = messages[messageNumber]
+        var newImageNumber: Int
+        repeat{
+            newImageNumber = Int.random(in: 0...totalNumberOfImages)
+        }while imageNumber == newImageNumber
+        imageNumber=newImageNumber
+        imageView.image=UIImage(named: "image\(imageNumber)")
         
     }
     
-    @IBAction func messageButtonPressedFirst(_ sender: UIButton) {
-        messageLabel.text="You are Awesome."
-        imageView.image=UIImage(named: "image0")
-    }
-    
-    
-    @IBAction func messageButtonPressedSecond(_ sender: UIButton) {
-        messageLabel.text="You are great."
-    }
-    
-    @IBAction func RandomMessgesAndPictures(_ sender: UIButton) {
-        messageLabel.text=messages[Int.random(in: 0...messages.count-1)]
-        imageView.image=UIImage(named:"image\(Int.random(in: 0...9))")
-        
-    }
-    
+
     
     
     
